@@ -1,0 +1,18 @@
+<div class="sidebar">
+  <div class="profile">
+    <img ngSrc="assets/avatar.png" alt="User Avatar" width="32" height="32">
+    <span class="notification-badge"></span>
+  </div>
+
+  <div class="nav-menu">
+    <a class="nav-item" *ngFor="let item of menuItems" [routerLink]="item.route" [ngClass]="{ active: item.route === '/home' }">
+      <img ngSrc="{{item.image}}" alt="{{item.label}}" width="{{item.width}}" height="{{item.height}}">
+      <p class="text">{{item.label}}</p>
+    </a>
+  </div>
+
+  <div class="bottom-settings">
+    <img ngSrc="assets/footericon.png" alt="Settings" width="42" height="41">
+    <mat-icon class="toggle-icon" (click)="toggleSidebar()">keyboard_arrow_down</mat-icon>
+  </div>
+</div>
