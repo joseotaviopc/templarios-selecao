@@ -1,0 +1,33 @@
+<div class="right-sidebar-container" [class.collapsed]="isCollapsed">
+  <div class="sidebar-header">
+    <h3 *ngIf="!isCollapsed">Suas tarefas de hoje</h3>
+  </div>
+
+  <div class="tasks-wrapper" *ngIf="!isCollapsed">
+    <nav class="tasks-list">
+      <a *ngFor="let task of tasks" (click)="toggleTaskCompletion(task)">
+        <mat-icon matListItemIcon class="task-checkbox" [class.completed]="task.completed">
+          {{ task.completed ? 'check_box' : 'check_box_outline_blank' }} </mat-icon>
+        <div class="task-content">
+          <div class="task-title" [class.completed]="task.completed">
+            {{ task.title }}
+          </div>
+          <div class="task-details">
+            <mat-icon class="category-icon"
+              [svgIcon]="task.categoryIcon.startsWith('custom_') ? task.categoryIcon : ''">
+              {{ task.categoryIcon.startsWith('custom_') ? '' : task.categoryIcon }}
+            </mat-icon>
+            <span class="category-text">{{ task.category }}</span>
+            <span class="schedule-text">{{ task.schedule }}</span>
+          </div>
+        </div>
+      </a>
+    </nav>
+  </div>
+
+  <div class="bottom-controls">
+    <button (click)="onToggleClick()" class="toggle-btn" [class.collapsed]="isCollapsed">
+      <mat-icon>keyboard_double_arrow_right</mat-icon>
+    </button>
+  </div>
+</div>
