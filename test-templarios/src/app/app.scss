@@ -7,7 +7,7 @@
   .app-container {
     display: flex;
     height: 100%;
-    background-color: #f5f6fa;
+    background-color: #1e1e1e;
   }
   
   .main-content {
@@ -16,23 +16,3 @@
     overflow-y: auto;
     transition: margin 0.3s ease;
   }
-  
-  .right-sidebar {
-    width: 300px;
-    height: 100%;
-    background-color: #fff;
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, width 0.3s ease;
-    overflow: hidden;
-    position: relative;
-    z-index: 5;
-    
-    &.collapsed {
-      transform: translateX(calc(100% - 40px));
-      
-      .toggle-btn {
-        transform: rotate(180deg);
-      }
-    }
-  }
-  

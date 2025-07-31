@@ -1,19 +1,12 @@
 <div class="app-container">
-    <!-- Left Sidebar -->
-    <app-sidebar class="sidebar"></app-sidebar>
-    
-    <!-- Main Content -->
-    <main class="main-content">
-      <app-main-content></app-main-content>
-    </main>
-    
-    <!-- Right Sidebar -->
-    <app-right-sidebar 
-      class="right-sidebar"
-      [class.collapsed]="isRightSidebarCollapsed"
-      (toggle)="toggleRightSidebar()">
-    </app-right-sidebar>
-  </div>
-  
+  <app-sidebar class="sidebar"></app-sidebar>
+
+  <main class="main-content">
+    <app-main-content></app-main-content>
+  </main>
+
+  <app-right-sidebar class="right-sidebar" [class.collapsed]="isRightSidebarCollapsed" (toggle)="toggleRightSidebar()">
+  </app-right-sidebar>
+</div>
 
 <router-outlet />
