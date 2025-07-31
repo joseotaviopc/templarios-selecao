@@ -13,10 +13,7 @@
             {{ task.title }}
           </div>
           <div class="task-details">
-            <mat-icon class="category-icon"
-              [svgIcon]="task.categoryIcon.startsWith('custom_') ? task.categoryIcon : ''">
-              {{ task.categoryIcon.startsWith('custom_') ? '' : task.categoryIcon }}
-            </mat-icon>
+            <img class="category-icon" ngSrc="{{task.categoryIcon}}" width="16" height="16">
             <span class="category-text">{{ task.category }}</span>
             <span class="schedule-text">{{ task.schedule }}</span>
           </div>
