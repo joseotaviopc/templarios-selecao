@@ -1,0 +1,40 @@
+<div class="dashboard-container">
+    <h2>Conteúdos da semana</h2>
+    <div class="dashboard-cards">
+        <div class="dashboard-card">
+            <img src="assets/thumb.png" alt="Dashboard Card" width="420" height="328">
+            <h3>Glomerulopatia I (Nefritica, Alterações Assintomáticas, GNRP)</h3>
+            <div class="dashboard-card-content">
+                <div class="dashboard-card-content-item" *ngFor="let card of cards">
+                    <div class="dashboard-card-content-item-title">
+                        <img src="{{card.icon}}" alt="Heart" width="16" height="16">
+                        <p>{{card.title}}</p>
+                    </div>
+                    <p>{{card.value}}%</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dashboard-card">
+            <img src="assets/thumb.png" alt="Dashboard Card" width="420" height="328">
+            <h3>Glomerulopatia I (Nefritica, Alterações Assintomáticas, GNRP)</h3>
+            <div class="dashboard-card-content">
+                <div class="dashboard-card-content-item" *ngFor="let card of cards">
+                    <div class="dashboard-card-content-item-title">
+                        <img src="{{card.icon}}" alt="Heart" width="16" height="16">
+                        <p>{{card.title}}</p>
+                    </div>
+                    <p>{{card.value}}%</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dashboard-metrics">
+        <h2>Veja a parcial da sua semana</h2>
+        <div class="dashboard-metrics-content">
+            
+        </div>
+        <p>Veja a parcial da sua semana</p>
+    </div>
+</div>
