@@ -1,0 +1,17 @@
+<div class="modal" [class.open]="open">
+    <div class="modal-content">
+        <mat-icon (click)="toggleProductsModal.emit()" class="close-icon">close</mat-icon>
+        <div class="modal-content-header">
+            <h2>Selecione os produtos</h2>
+        </div>
+        <div class="modal-content-body">
+            <div class="modal-content-body-card" *ngFor="let product of products">
+                <img src="{{product.image}}" alt="{{product.name}}" width="16" height="16">
+                <p>{{ product.name }}</p>
+            </div>
+        </div>
+        <div class="modal-content-footer">
+            <p>(+5) mostrar todos os produtos</p>
+        </div>
+    </div>
+</div>

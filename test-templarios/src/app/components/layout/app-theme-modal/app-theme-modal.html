@@ -1,0 +1,18 @@
+<div class="modal" [class.open]="open">
+    <div class="modal-content">
+        <mat-icon (click)="toggleThemeModal.emit()" class="close-icon">close</mat-icon>
+        <div class="modal-content-header">
+            <h2>Modo Claro</h2>
+            <p>Por enquanto esta funcionalidade está disponível apenas para algumas áreas, em breve estará disponível para todo o aplicativo.</p>
+        </div>
+        <div class="modal-content-body">
+            <div class="modal-content-body-card" *ngFor="let theme of themes">
+                <img src="{{theme.image}}" alt="{{theme.name}}" width="16" height="16">
+                <p>{{ theme.name }}</p>
+            </div>
+        </div>
+        <div class="modal-content-footer">
+            <button>Aplicar</button>
+        </div>
+    </div>
+</div>
