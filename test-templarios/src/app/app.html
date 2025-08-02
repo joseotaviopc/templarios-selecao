@@ -1,13 +1,16 @@
 <div class="app-container">
-  <app-sidebar></app-sidebar>
+  <app-products-modal [open]="productsModalOpen" (toggleProductsModal)="toggleProductsModal()"></app-products-modal>
+  <app-theme-modal [open]="themeModalOpen" (toggleThemeModal)="toggleThemeModal()"></app-theme-modal>
+  
+  <app-sidebar [productsModalOpen]="productsModalOpen" (toggleProductsModal)="toggleProductsModal()" (toggleThemeModal)="toggleThemeModal()"></app-sidebar>
   <div class="mobile-header">
     <div class="mobile-title">
-      <img ngSrc="assets/footericon.png" alt="Settings" width="42" height="41">
+      <img ngSrc="assets/footericon.png" (click)="toggleProductsModal()" alt="Settings" width="42" height="41">
       <h2>2022 Revalidação</h2>
       <mat-icon class="toggle-icon">keyboard_arrow_down</mat-icon>
     </div>
     <div class="profile">
-      <img ngSrc="assets/avatar.png" alt="User Avatar" width="32" height="32">
+      <img ngSrc="assets/avatar.png" (click)="toggleThemeModal()" alt="User Avatar" width="32" height="32">
       <span class="notification-badge"></span>
     </div>
   </div>

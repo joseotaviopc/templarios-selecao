@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, EventEmitter, Input, Output } from "@angular/core";
 import { CommonModule, NgOptimizedImage } from "@angular/common";
 import { RouterModule } from "@angular/router";
 import { MatIconModule } from "@angular/material/icon";
@@ -28,6 +28,9 @@ interface MenuItem {
 })
 export class SidebarComponent {
 	isExpanded = false;
+	@Input() productsModalOpen = false;
+	@Output() toggleProductsModal = new EventEmitter<void>();
+	@Output() toggleThemeModal = new EventEmitter<void>();
 
 	menuItems: MenuItem[] = [
 		{

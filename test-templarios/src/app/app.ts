@@ -8,6 +8,8 @@ import { MatIconModule } from "@angular/material/icon";
 import { SidebarComponent } from "./components/layout/sidebar/sidebar";
 import { RightSidebarComponent } from "./components/layout/right-sidebar/right-sidebar";
 import { MainContentComponent } from "./components/layout/main-content/main-content";
+import { AppProductsModal } from "./components/layout/app-products-modal/app-products-modal";
+import { AppThemeModal } from "./components/layout/app-theme-modal/app-theme-modal";
 
 @Component({
 	selector: "app-root",
@@ -22,6 +24,8 @@ import { MainContentComponent } from "./components/layout/main-content/main-cont
 		SidebarComponent,
 		RightSidebarComponent,
 		MainContentComponent,
+		AppProductsModal,
+		AppThemeModal,
 		NgOptimizedImage
 	],
 	templateUrl: "./app.html",
@@ -30,8 +34,18 @@ import { MainContentComponent } from "./components/layout/main-content/main-cont
 export class App {
 	protected readonly title = signal("test-templarios");
 	isRightSidebarCollapsed = false;
+	productsModalOpen = false;
+	themeModalOpen = false;
 
 	toggleRightSidebar() {
 		this.isRightSidebarCollapsed = !this.isRightSidebarCollapsed;
+	}
+
+	toggleProductsModal() {
+		this.productsModalOpen = !this.productsModalOpen;
+	}
+
+	toggleThemeModal() {
+		this.themeModalOpen = !this.themeModalOpen;
 	}
 }

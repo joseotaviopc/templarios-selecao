@@ -1,6 +1,6 @@
 <div class="sidebar">
   <div class="profile">
-    <img ngSrc="assets/avatar.png" alt="User Avatar" width="32" height="32">
+    <img ngSrc="assets/avatar.png" (click)="toggleThemeModal.emit()" alt="User Avatar" width="32" height="32">
     <span class="notification-badge"></span>
   </div>
 
@@ -12,7 +12,7 @@
   </div>
 
   <div class="bottom-settings">
-    <img ngSrc="assets/footericon.png" alt="Settings" width="42" height="41">
+    <img ngSrc="assets/footericon.png" alt="Settings" width="42" height="41" (click)="toggleProductsModal.emit()">
     <mat-icon class="toggle-icon" (click)="toggleSidebar()">keyboard_arrow_down</mat-icon>
   </div>
 
