@@ -1,11 +1,11 @@
 <div class="app-container">
   <app-sidebar class="sidebar"></app-sidebar>
 
-  <main class="main-content">
+  <main class="main-content" [class.collapsed]="isRightSidebarCollapsed">
     <app-main-content></app-main-content>
   </main>
 
-  <app-right-sidebar class="right-sidebar" [class.collapsed]="isRightSidebarCollapsed" (toggle)="toggleRightSidebar()">
+  <app-right-sidebar class="right-sidebar" [isCollapsed]="isRightSidebarCollapsed" (toggleSidebar)="toggleRightSidebar()">
   </app-right-sidebar>
 </div>
 

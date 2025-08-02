@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, EventEmitter, Input, Output } from "@angular/core";
 import { CommonModule, NgOptimizedImage } from "@angular/common";
 import { MatIconModule } from "@angular/material/icon";
 import { MatListModule } from "@angular/material/list";
@@ -27,7 +27,8 @@ export interface Task {
 	styleUrls: ["./right-sidebar.scss"],
 })
 export class RightSidebarComponent {
-	isCollapsed = false;
+	@Input() isCollapsed = false;
+	@Output() toggleSidebar = new EventEmitter<void>();
 
 	tasks: Task[] = [
 		{
@@ -120,9 +121,9 @@ export class RightSidebarComponent {
 		},
 	];
 
-	onToggleClick() {
-		this.isCollapsed = !this.isCollapsed;
-	}
+	// onToggleClick() {
+	// 	this.isCollapsed = !this.isCollapsed;
+	// }
 
 	toggleTaskCompletion(task: Task) {
 		task.completed = !task.completed;
