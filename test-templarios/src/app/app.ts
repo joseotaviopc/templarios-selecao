@@ -26,7 +26,7 @@ import { AppThemeModal } from "./components/layout/app-theme-modal/app-theme-mod
 		MainContentComponent,
 		AppProductsModal,
 		AppThemeModal,
-		NgOptimizedImage
+		NgOptimizedImage,
 	],
 	templateUrl: "./app.html",
 	styleUrls: ["./app.scss"],
