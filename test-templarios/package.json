@@ -6,7 +6,11 @@
 		"start": "ng serve",
 		"build": "ng build",
 		"watch": "ng build --watch --configuration development",
-		"test": "ng test"
+		"test": "ng test",
+		"format": "npx @biomejs/biome format ./src",
+		"lint": "npx @biomejs/biome lint ./src",
+		"format:fix": "npx @biomejs/biome format ./src --write",
+		"lint:fix": "npx @biomejs/biome lint ./src --write"
 	},
 	"prettier": {
 		"overrides": [
