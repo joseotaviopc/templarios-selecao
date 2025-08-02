@@ -1,5 +1,5 @@
 import { Component, signal } from "@angular/core";
-import { CommonModule } from "@angular/common";
+import { CommonModule, NgOptimizedImage } from "@angular/common";
 import { RouterModule, RouterOutlet } from "@angular/router";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatToolbarModule } from "@angular/material/toolbar";
@@ -22,6 +22,7 @@ import { MainContentComponent } from "./components/layout/main-content/main-cont
 		SidebarComponent,
 		RightSidebarComponent,
 		MainContentComponent,
+		NgOptimizedImage
 	],
 	templateUrl: "./app.html",
 	styleUrls: ["./app.scss"],

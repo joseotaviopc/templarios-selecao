@@ -1,11 +1,49 @@
 <div class="app-container">
-  <app-sidebar class="sidebar"></app-sidebar>
+  <app-sidebar></app-sidebar>
+  <div class="mobile-header">
+    <div class="mobile-title">
+      <img ngSrc="assets/footericon.png" alt="Settings" width="42" height="41">
+      <h2>2022 Revalidação</h2>
+      <mat-icon class="toggle-icon">keyboard_arrow_down</mat-icon>
+    </div>
+    <div class="profile">
+      <img ngSrc="assets/avatar.png" alt="User Avatar" width="32" height="32">
+      <span class="notification-badge"></span>
+    </div>
+  </div>
 
   <main class="main-content" [class.collapsed]="isRightSidebarCollapsed">
     <app-main-content></app-main-content>
   </main>
 
-  <app-right-sidebar class="right-sidebar" [isCollapsed]="isRightSidebarCollapsed" (toggleSidebar)="toggleRightSidebar()">
+  <div class="mobile-dashboard-metrics">
+    <h2>Veja a parcial da sua semana</h2>
+    <div class="dashboard-metrics-content">
+      <div class="dashboard-metrics-content-info">
+        <div class="dashboard-metrics-content-title">
+          <p>Acertos</p>
+          <mat-icon class="toggle-icon">help_outline</mat-icon>
+        </div>
+        <p class="dashboard-metrics-content-info-value">90%</p>
+        <p>32 questões</p>
+      </div>
+      <div class="dashboard-metrics-content-graph">
+        <div class="dashboard-metrics-content-graph-bar bar-1"><span></span></div>
+        <div class="dashboard-metrics-content-graph-bar bar-2"><span></span></div>
+        <div class="dashboard-metrics-content-graph-bar bar-3"><span></span></div>
+        <div class="dashboard-metrics-content-graph-bar bar-4"><span></span></div>
+        <div class="dashboard-metrics-content-graph-bar bar-5"><span></span></div>
+        <div class="dashboard-metrics-content-graph-bar bar-6"><span></span></div>
+        <div class="dashboard-metrics-content-graph-bar bar-7"><span></span></div>
+      </div>
+    </div>
+    <div class="dashboard-metrics-subtitle">
+      <p>Acessar o painel de métricas</p>
+      <mat-icon class="toggle-icon">keyboard_arrow_right</mat-icon>
+    </div>
+  </div>
+
+  <app-right-sidebar [isCollapsed]="isRightSidebarCollapsed" (toggleSidebar)="toggleRightSidebar()">
   </app-right-sidebar>
 </div>
 
